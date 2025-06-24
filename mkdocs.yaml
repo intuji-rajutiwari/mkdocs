@@ -3,18 +3,13 @@ nav:
   - index.md
   - Documents:
       - Overview: overview.md
-      - Getting Started:
-          - Installation:
-              - System Requirements: docs/getting-started/installation/system-requirements.md
-              - Step-by-Step Guide: docs/getting-started/installation/steps.md
-              - Troubleshooting: docs/getting-started/installation/troubleshooting.md
-          - Configuration: docs/getting-started/configuration.md
-      - Features:
-          - Theme Customization: docs/features/theme-customization.md
-          - Extensions: docs/features/extensions.md
-      - Advanced:
-          - Deployment: docs/advanced/deployment.md
-          - Optimization: docs/advanced/optimization.md
+      - Projects:
+          - COERCO:
+              - Frontend: projects/coerco/fe.md
+              - API: projects/coerco/api.md
+              - Admin: projects/coerco/admin.md
+      - Tech and Tools:
+          - Velero: techs-and-tools/velero.md
   - Blog:
     - blog/index.md
 
