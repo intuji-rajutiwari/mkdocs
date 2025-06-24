@@ -1,0 +1,56 @@
+site_name: ""
+nav:
+  - index.md
+  - Documents:
+      - Overview: overview.md
+      - Getting Started:
+          - Installation:
+              - System Requirements: docs/getting-started/installation/system-requirements.md
+              - Step-by-Step Guide: docs/getting-started/installation/steps.md
+              - Troubleshooting: docs/getting-started/installation/troubleshooting.md
+          - Configuration: docs/getting-started/configuration.md
+      - Features:
+          - Theme Customization: docs/features/theme-customization.md
+          - Extensions: docs/features/extensions.md
+      - Advanced:
+          - Deployment: docs/advanced/deployment.md
+          - Optimization: docs/advanced/optimization.md
+  - Blog:
+    - blog/index.md
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+  palette:
+    - scheme: default
+      primary: white
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  logo: images/logo-white.svg
+
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences
+  - toc:                 
+      permalink: true
+
+extra_css:
+  - stylesheets/custom.css

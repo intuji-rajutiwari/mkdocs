@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mkdocs
+  labels:
+    app: mkdocs
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: mkdocs 
+  template:
+    metadata:
+      labels:
+        app: mkdocs 
+    spec:
+      containers:
+      - name: mkdocs
+        image: registry.digitalocean.com/intuji/mkdocs:${BUILD_TAG}
+        ports:
+        - name: mkdocs
+          containerPort: 80
+          protocol: TCP
+        resources: {}
+        imagePullPolicy: Always
+      restartPolicy: Always

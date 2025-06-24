@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if page and page.url == "" %}  <!-- Check if it's the home page -->
+    <style>
+      /* Full-width home page styles */
+      .md-main__inner { padding: 0; }
+      .md-content { 
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .md-sidebar { display: none; }
+      .md-content__inner { 
+        margin: 0;
+        padding: 0;
+      }
+      /* Optional: Remove header/footer for a truly full-page experience */
+      .md-header { position: static; }
+      .md-footer { display: none; }
+    </style>
+    <div class="full-width-home">
+      {{ super() }}  <!-- Render content from index.md -->
+    </div>
+  {% else %}
+    {{ super() }}  <!-- Default layout for other pages -->
+  {% endif %}
+{% endblock %}
